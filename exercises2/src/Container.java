@@ -1,7 +1,13 @@
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.HashMap;
 import java.util.Map;
 
 // Custom annotation for injection
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
 @interface InjectDependency {}
 
 // Container class acting as a dependency injection container
