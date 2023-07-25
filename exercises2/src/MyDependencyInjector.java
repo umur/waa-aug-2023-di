@@ -18,13 +18,18 @@ public class MyDependencyInjector implements DependencyInjector {
                     field.setAccessible(true);
 
                     Class<?> fieldType = field.getType();
+                    System.out.println("0"+fieldType);
+                    System.out.println("1"+field.get(target));
+
                     Object dependencyInstance = container.getDependency(fieldType);
+                    System.out.println("dependencyInstance"+dependencyInstance);
 
                     if (dependencyInstance == null) {
                         throw new RuntimeException("Dependency not found for class: " + fieldType.getName());
                     }
-
+                    System.out.println("2"+field.get(target));
                     field.set(target, dependencyInstance);
+                    System.out.println("3"+field.get(target));
                 }
             }
         } catch (Exception e) {
