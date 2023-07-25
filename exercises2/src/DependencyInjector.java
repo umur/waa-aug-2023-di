@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface DependencyInjector {
+public interface DependencyInjector {
+    void injectDependencies(Object target, Container container);
 }

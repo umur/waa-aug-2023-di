@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class NotificationService {
+public class NotificationService {
+    @InjectDependency
+    private EmailService emailService;
+
+    public void sendNotification(String notification) {
+        emailService.sendEmail("Notification: " + notification);
+    }
 }
