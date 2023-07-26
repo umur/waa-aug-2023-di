@@ -14,7 +14,7 @@ public class MyDependencyInjector implements DependencyInjector {
 
         try {
             for (Field field : targetClass.getDeclaredFields()) {
-                if (field.isAnnotationPresent(InjectDependency.class)) {
+                if (field.isAnnotationPresent(Service.class)) {
                     field.setAccessible(true);
 
                     Class<?> fieldType = field.getType();

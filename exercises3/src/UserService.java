@@ -1,5 +1,5 @@
 public class UserService {
-    @InjectDependency
+    @Service
     private UserRepository userRepository;
 
     public void testClass(String message) {

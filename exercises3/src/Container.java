@@ -7,7 +7,7 @@ import java.util.Map;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-@interface InjectDependency {}
+@interface Service {}
 
 public class Container {
     private Map<Class<?>, Object> dependencies;
